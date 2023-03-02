@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  width:100%;
+  background-color:brown;
+  box-shadow: 0 0 5px 3px rgba(0,0,0,0.8);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: left;
+  padding: 10px 0;
+}
+.logo{
+  margin:0 5px 0 3px;
+  object-fit: contain;
+}
+header h1{
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  text-shadow: 1px 5px 4px #000;
 }
 
-.App-link {
-  color: #61dafb;
+footer{
+  padding: 10px;
+  width: 100%;
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  right:0;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(229, 226, 226, 0.8);
+}
+footer h3{
+  text-align: center;
+  color: #818181;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.note__container{
+  position: relative;
+  max-width:500px;
+  min-width:200px;
+  max-height:300px;
+  min-height:50px;
+  box-shadow: 0 0 0 1px #f2e8e8;
+  background-color:rgba(139, 190, 199, 0.2);
+  margin:30px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.note__container form{
+  margin: 10px;
+}
+
+input,textarea{
+  display: block;
+  margin: 10px 0;
+  outline: 0;
+  border: 0;
+  box-shadow: 1px 1px 0px 2px #f0ebeb;
+  width:100%;
+  border-radius: 3px;
+  padding:5px;
+  text-transform: capitalize;
+}
+input{
+ font-size: 1.3rem;
+ color:#000;
+ font-weight: 900;
+ letter-spacing: 1px;
+}
+
+textarea{
+  resize:none;
+}
+.note__container form .form_btn{
+  width:50px;
+  height:50px;
+  position:absolute;
+  bottom: -18px;
+  right: 10px;
+  border-radius:50%;
+  background-color:brown;
+  /* font-size: 1rem; */
+  color:burlywood;
+  cursor:pointer;
+}
+
+.note__container form .form_btn:hover{
+  background-color: #000;
+  color:white;
+}
+
+.NewCom{
+  position: relative;
+  margin: 40px 10px;
+  box-shadow: 0 0 0 1px #f2e8e8;
+  background-color:rgba(139, 190, 199, 0.2);
+  width:200px;
+  height: 200px;
+  float: left;
+  border-radius:9px;
+}
+.NewCom h1{
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  color:#000;
+  font-weight: 800;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+.NewCom p{
+  margin: 4px;
+  color:#818181;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  padding: 10px;
+  background-color: #fff;
+  overflow-y: auto;
+  min-height:15px;
+  max-height: 90px;
+  text-transform: capitalize;
+}
+
+.NewCom .btn{
+  position:absolute;
+  bottom:0px;
+  right: 5px;
+  margin: 0 10px;
+  width:50px;
+  height: 50px;
+  background-color:brown;
+  color: burlywood;
+  border-radius: 50%;
+  border: none;
+}
+.NewCom .btn:hover{
+  background-color:#000;
+  color:#fff;
+}
+@media (max-width:720px){
+  input,textarea{
+    padding: 3px;
+    font-size:0.9rem;
   }
-  to {
-    transform: rotate(360deg);
+  .note__container form .form_btn{
+    width:25px;
+    height:40px;
+    font-size: 1rem;
+    padding:3px;
+    border-radius:50% ;
+  }
+  .NewCom h1{
+    font-size: 1.2rem;
+  }
+  .NewCom p{
+    background-color: #fff;
+    font-size:0.9rem ;
+  }
+  .NewCom .btn{
+    width:30px;
+    height: 30px;
+    font-size: .5rem;
+    margin-bottom: 3px;
+  }
+}
+
+@media (max-width:400px){
+  .NewCom{
+    width:100%;
+    margin:0;
+    float: none;
   }
 }
